@@ -1,0 +1,46 @@
+{
+  "name": "soundboard",
+  "productName": "FSVL Soundboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build-osx": "electron-packager . --overwrite --ignore=\"(src/renderer|.config.js)\" --asar --platform=darwin --arch=x64 --prune=true --out=build ",
+    "build-osx-arm64": "electron-packager . --overwrite --ignore=\"(src/renderer|.config.js)\" --asar --platform=darwin --arch=arm64 --prune=true --out=build ",
+	"build-win": "electron-packager . --overwrite --ignore=\"(src/renderer|.config.js|Sounds)\" --asar --platform=win32 --arch=ia32 --prune=true --out=build",
+	"build-win64": "electron-packager . --overwrite --ignore=\"(src/renderer|.config.js|Sounds)\" --asar --platform=win32 --arch=x64 --prune=true --out=build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "electron-store": "^8.1.0",
+    "express": "^4.18.2",
+    "express-ws": "^5.0.2",
+    "file-type": "^16.5.4",
+    "ip": "^1.1.8",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.19",
+    "@vue/cli-plugin-router": "~4.5.19",
+    "@vue/cli-plugin-vuex": "~4.5.19",
+    "@vue/cli-service": "~4.5.19",
+    "animejs": "^3.2.1",
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.9.1",
+    "electron": "^21.2.0",
+    "electron-packager": "^17.0.0",
+    "less": "^3.13.1",
+    "less-loader": "^5.0.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vue-template-compiler": "^2.6.11",
+    "vue-virtual-collection": "^1.5.0",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.4.0"
+  }
+}
